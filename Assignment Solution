@@ -1,0 +1,27 @@
+#include <stdio.h>
+void main(){
+    int i, a, b;
+    int arr[100];
+    printf("Enter the length of an Array : ");    // Asking Length of the array from the user
+    scanf("%d", &a);
+    printf("Enter the elements in array\n");      // Inserting elements in array
+    for (i = 0; i < a; i++){
+        scanf("%d", &arr[i]);
+    }
+    printf("Enter the element to be searched : ");  // Asking user to enter the element to be searched in array
+    scanf("%d", &b);
+
+   // Logical Part
+    i = 0;
+    while (i < a && b != arr[i]){
+        i++;
+    }
+
+    if (i < a){
+        //If condition matched element position is printed
+        printf("The position of found element is  = %d", i+1);
+    }
+    else{
+        printf("Element not found"); 
+    }
+}
